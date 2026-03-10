@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo Genius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>GENIUS</h1>
+
+        <!-- Área principal do jogo -->
+        <div class="painel-jogo">
+
+            <button class="cor cor-verde" data-cor="verde"></button>
+            <button class="cor cor-vermelho" data-cor="vermelho"></button>
+            <button class="cor cor-amarelo" data-cor="amarelo"></button>
+            <button class="cor cor-azul" data-cor="azul"></button>
+
+        </div>
+
+        <!-- Status do jogo -->
+        <p id="status">Clique em iniciar para jogar</p>
+
+        <!-- Pontuação -->
+        <p>Pontuação: <span id="pontuacao">0</span></p>
+
+        <!-- Botões de controle -->
+        <div class="acoes">
+
+            <button id="btnIniciar">Iniciar</button>
+            <button id="btnReset">Resetar</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
