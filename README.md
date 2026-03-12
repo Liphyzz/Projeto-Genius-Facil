@@ -1,1 +1,1 @@
-# Projeto-Genius-F-cil-
+Jogo Genius desenvolvido com HTML, CSS e JavaScript.
