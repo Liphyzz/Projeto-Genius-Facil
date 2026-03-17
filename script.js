@@ -55,7 +55,7 @@ function proximaRodada() {
   podeClicar = false;
 
   // Math.random gera um número entre 0 e 1.
-  // Multiplicando por `cores.length`, temos um valor dentro do tamanho do array.
+  // Multiplicando por cores.length, temos um valor dentro do tamanho do array.
   // Math.floor remove a parte decimal e transforma isso em um índice válido.
   const indice = Math.floor(Math.random() * cores.length);
   const corSorteada = cores[indice];
