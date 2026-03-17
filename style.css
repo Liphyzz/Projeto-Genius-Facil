@@ -1,44 +1,108 @@
-body{
-    font-family: sans-serif;
-    color:#131212bf;
+/* Estilo geral da página */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
-h1{
-    color: black;
-    size: 20px;
-    justify-content: center;
-    display: flex;
-}
-.cor-verde{
-    background-color: darkgreen;
-    width: 300px;
-    height: 300px;
-}
-.cor-vermelho{
-    background-color: darkred;
-    width: 300px;
-    height: 300px;
 
+/* Área principal com título, status e pontuação */
+.status {
+    margin-top: 40px;
 }
-.cor-azul{
-    background-color: darkblue;
-    width: 300px;
-    height: 300px;
 
+h1 {
+    margin-bottom: 10px;
 }
-.cor-amarelo {
-    background-color: #BA8E23;
-    width: 300px;
-    height: 300px;
 
+#status {
+    color: #d9d9d9;
+    min-height: 24px;
+    margin-bottom: 8px;
 }
-.painel-jogo{
+
+/* Grade onde ficam os quatro quadrados */
+.quadrado {
     display: grid;
- grid-template-columns: 300px 300px;
- grid-template-rows: 300px 300px;
- justify-content: center;
-
+    grid-template-columns: 200px 200px;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
 }
-.ativo {
+
+/* Estilo base aplicado a todas as cores */
+.cor {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
     opacity: 0.5;
-    transform: scale(0.95);
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Cores individuais do painel */
+.verde {
+    background-color: darkgreen;
+}
+
+.vermelho {
+    background-color: darkred;
+}
+
+.amarelo {
+    background-color: goldenrod;
+}
+
+.azul {
+    background-color: darkblue;
+}
+
+/* Efeito ao passar o mouse */
+.cor:hover {
+    opacity: 0.75;
+}
+
+/* Efeito usado pelo JavaScript para "acender" a cor */
+.cor.ativo {
+    opacity: 1;
+    transform: scale(1.04);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.85);
+}
+
+/* Área dos botões */
+.botao {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+}
+
+#btnIniciar {
+    background-color: lightgreen;
+    color: black;
+}
+
+#btnReset {
+    background-color: lightcoral;
+    color: white;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 520px) {
+    .quadrado {
+        grid-template-columns: 150px 150px;
+    }
+
+    .cor {
+        width: 150px;
+        height: 150px;
+    }
 }

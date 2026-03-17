@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo Genius</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <div class="container">
-
-        <h1>GENIUS</h1>
-
-        <!-- Área principal do jogo -->
-        <div class="painel-jogo">
-
-            <button class="cor cor-verde" data-cor="verde"></button>
-            <button class="cor cor-vermelho" data-cor="vermelho"></button>
-            <button class="cor cor-amarelo" data-cor="amarelo"></button>
-            <button class="cor cor-azul" data-cor="azul"></button>
-
-        </div>
-
-        <!-- Status do jogo -->
+    <!-- Estrutura principal visível do jogo -->
+    <div class="status">
+        <h1>Jogo Genius</h1>
         <p id="status">Clique em iniciar para jogar</p>
-
-        <!-- Pontuação -->
         <p>Pontuação: <span id="pontuacao">0</span></p>
-        <!-- Botões de controle -->
-        <div class="acoes">
 
-            <button id="btnIniciar">Iniciar</button>
-            <button id="btnReset">Resetar</button>
-
+        <!-- as quatro cores -->
+        <div class="quadrado">
+            <div class="cor verde" data-cor="verde"></div>
+            <div class="cor vermelho" data-cor="vermelho"></div>
+            <div class="cor amarelo" data-cor="amarelo"></div>
+            <div class="cor azul" data-cor="azul"></div>
         </div>
 
+        <!-- Botões de controle -->
+        <div class="botao">
+            <button id="btnIniciar">Iniciar Jogo</button>
+            <button id="btnReset">Resetar</button>
+        </div>
     </div>
 
+    <!-- js -->
     <script src="script.js"></script>
-
 </body>
 </html>
