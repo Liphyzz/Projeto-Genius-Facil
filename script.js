@@ -11,21 +11,18 @@ let sequenciaJogo = [];
 let pontuacao = 0;
 let podeClicar = false;
 
-//Lista fixa das cores possíveis no jogo
+//Lista fixa das cores
 const cores = ["verde", "vermelho", "amarelo", "azul"];
 
 // Clique nas cores
 // Cada quadrado recebe um evento de clique.
 botoes.forEach((botao) => {
   botao.addEventListener("click", () => {
-    // Se a sequência do jogo ainda estiver sendo mostrada,
-    // o clique do jogador é ignorado
     if (!podeClicar) {
       return;
     }
 
-    // dataset.cor lê o valor do atributo data-cor do HTML
-    // Ex: <div data-cor="verde"> retorna "erde
+    // Ex: <div data-cor="verde"> retorna "verde"
     const cor = botao.dataset.cor;
 
     sequenciaJogador.push(cor);
@@ -54,16 +51,17 @@ function proximaRodada() {
   sequenciaJogador = [];
   podeClicar = false;
 
-  // Math.random gera um número entre 0 e 1.
-  // Multiplicando por cores.length, temos um valor dentro do tamanho do array.
-  // Math.floor remove a parte decimal e transforma isso em um índice válido.
   const indice = Math.floor(Math.random() * cores.length);
   const corSorteada = cores[indice];
 
   sequenciaJogo.push(corSorteada);
 
   console.log("sequencia do jogo:", sequenciaJogo);
-  mostrarSequencia();
+  statusTexto.textContent = "prepare-se para ver a sequencia";
+
+  setTimeout(() => {
+    mostrarSequencia();
+  }, 800);
 }
 
 // Exibição da sequência gerada pelo jogo
@@ -73,7 +71,7 @@ function mostrarSequencia() {
   let i = 0;
 
   // setInterval repete a função automaticamente a cada 800ms.
-  // Isso é o que permite mostrar uma cor por vez.
+  // Isso é o que permite mostrar uma cor por vez
   const intervalo = setInterval(() => {
     const corAtual = sequenciaJogo[i];
     piscarBotao(corAtual);
