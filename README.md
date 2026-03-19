@@ -6,11 +6,9 @@ O objetivo do jogador e observar a sequencia de cores exibida pelo jogo e repeti
 
 ## Preview do projeto
 
-Espaco reservado para a print do projeto funcionando:
 
 ![Preview do projeto](./assets/preview.png)
 
-Se ainda nao tiver criado a imagem, voce pode manter esse caminho como referencia e adicionar o arquivo depois.
 
 ## Funcionalidades
 
