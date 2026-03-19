@@ -2,22 +2,28 @@
 
 Jogo da memoria inspirado no classico Genius, desenvolvido com `HTML`, `CSS` e `JavaScript`.
 
-O objetivo do jogador e observar a sequencia de cores exibida pelo jogo e repeti-la corretamente a cada rodada. A cada acerto, uma nova cor e adicionada a sequencia, aumentando a dificuldade.
+## Acesse online
 
-## Preview do projeto
+Projeto publicado no Render:
 
+`https://projetogenius.onrender.com`
+
+## Preview
 
 ![Preview do projeto](./assets/preview.png)
 
+## Sobre o projeto
+
+O objetivo do jogo e observar a sequencia de cores exibida e repeti-la corretamente a cada rodada. A cada acerto, uma nova cor e adicionada, deixando o desafio mais dificil.
 
 ## Funcionalidades
 
-- Inicio da partida com botao de controle
-- Geracao aleatoria de sequencias
-- Validacao dos cliques do jogador
-- Contador de pontuacao
-- Reinicio do jogo com botao `Resetar`
-- Interface responsiva para telas menores
+- Iniciar uma nova partida
+- Gerar sequencias aleatorias de cores
+- Validar os cliques do jogador
+- Exibir pontuacao em tempo real
+- Resetar o jogo com um botao dedicado
+- Funcionar bem em telas menores
 
 ## Tecnologias utilizadas
 
@@ -27,46 +33,48 @@ O objetivo do jogador e observar a sequencia de cores exibida pelo jogo e repeti
 
 ## Estrutura do projeto
 
-```bash
+```text
 Projeto-Genius-Facil/
-├── > assets
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-
+|-- assets/
+|-- index.html
+|-- style.css
+|-- script.js
+|-- render.yaml
+`-- README.md
 ```
 
-## Como executar o projeto
+## Como executar localmente
 
-1. Baixe ou clone este repositorio.
-2. Abra a pasta do projeto no seu computador.
+1. Clone ou baixe este repositorio.
+2. Abra a pasta do projeto.
 3. Execute o arquivo `index.html` no navegador.
 
 ## Como jogar
 
-1. Clique no botao `Iniciar Jogo`.
-2. Observe atentamente a sequencia de cores exibida.
-3. Repita a mesma ordem clicando nos quadrados coloridos.
+1. Clique em `Iniciar Jogo`.
+2. Observe a sequencia mostrada pelo jogo.
+3. Repita a mesma ordem clicando nas cores.
 4. A cada rodada correta, uma nova cor sera adicionada.
-5. Se errar a sequencia, o jogo termina.
+5. Se errar a sequencia, a partida termina.
 
-## Logica do projeto
+## Logica do jogo
 
-O funcionamento do jogo acontece da seguinte forma:
+- O sistema sorteia uma nova cor aleatoria
+- A cor e adicionada a sequencia atual
+- O jogo exibe a sequencia visualmente
+- O jogador tenta reproduzir a ordem correta
+- Cada clique e comparado com a sequencia esperada
+- Ao acertar toda a rodada, a pontuacao aumenta e uma nova rodada comeca
 
-- O sistema sorteia uma cor aleatoria e adiciona na sequencia do jogo
-- A sequencia e exibida visualmente para o jogador
-- O jogador tenta repetir a ordem correta
-- O sistema compara cada clique com a sequencia esperada
-- Se estiver tudo certo, a rodada avanca e a pontuacao aumenta
+## Deploy
+
+O projeto esta configurado para deploy no Render com o arquivo `render.yaml`, usando o modo de site estatico.
 
 ## Melhorias futuras
 
 - Adicionar sons para cada cor
 - Criar niveis de dificuldade
 - Exibir recorde de pontuacao
-- Melhorar animacoes visuais
-- Adicionar tela final com opcao de reiniciar
-- Salvar localmente a pontuação
----
+- Melhorar as animacoes visuais
+- Adicionar uma tela final de jogo
+- Salvar a melhor pontuacao localmente
